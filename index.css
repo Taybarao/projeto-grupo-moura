@@ -1,0 +1,171 @@
+@font-face {
+    font-family: 'icones';
+    src: url(../font/icones.ttf);
+}
+
+body{
+    display: flex;
+    flex-direction: column;
+}
+
+.cabeçalho{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    background:  linear-gradient(97.54deg, #002F52 35.49%, #000000 165.37%);
+    color: white;
+    padding: 5px;
+    box-sizing: border-box;
+    box-shadow: 0 10px 100px rgb(0, 1, 90);
+}
+.titulo-header{
+    width: 150px;
+    font-size: 36px;
+    text-align: center;
+   font-family: Verdana, Geneva, Tahoma, sans-serif;
+   border-bottom: 1px solid black;
+   padding-bottom: 5px;
+  
+}
+.subtitulo-header{
+    margin-top: 5px;
+    color:white;
+    margin-left: 10px;
+    padding-bottom: 5px;
+    letter-spacing: 6px;
+}
+
+.container-lista-menu{
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    align-items: center;
+}
+
+.botao-menu{
+    display: flex;
+    background-image: url(fotos/Menu.svg);
+    background-repeat: no-repeat;
+    background-position: center;
+    width: 25px;
+    height: 25px;
+    padding: 10px; 
+    margin: 10px ;
+    
+}
+
+.lista-menu{
+    display: none;
+    margin-right: 20px;
+    padding: 10px 0;
+    font-size: 16px;
+    font-weight: bold;
+    width: 100%;
+    justify-content: end;
+    }
+
+    .item-lista-menu{
+        margin-right: 2rem;
+        padding: 5px;
+        letter-spacing: 1px;
+        border-right: 1px solid rgba(0, 0, 0, 0.392);
+        border-bottom: 1px solid red;
+    }
+
+    .menu-lateral{
+        position: absolute;
+        display: flex;
+        flex-direction: column;
+        width:55%;
+        height: 500px;
+        background-color: #002F52;
+        color: white;
+        margin-top: 120px;
+        margin-left: -100%;
+        transition: 1s;
+    }
+
+    .menu-lateral-ativo{
+        margin-left: 0;
+        transition: 1.2s;
+    }
+
+  .lista-menu-lateral{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    width: 100%;
+    margin-top: 50px;
+  
+    
+  }
+
+  .item-lista-menu-lateral{
+    margin: 25px 0;
+    padding: 10px 20px;
+    border-bottom: 1px solid white;
+    width: 100%;
+    box-sizing: border-box;
+  }
+  .container-conteudo-principal{
+    background-image: url(fotos/vigilancia-patrimonial-ostensiva-como-recurso-para-sua-empresa-blog.png);
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-weight: bold;
+    background-position: left;
+    background-size: cover;
+    width: 100%;
+    height: 600px;
+    box-sizing: border-box;
+    padding: 10px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    gap: 16px;
+    grid-template-areas: 
+    " titulo titulo"
+    " logo texto"
+    ;
+  }
+
+  .titulo-conteudo-principal{
+   grid-area: titulo; 
+   justify-self: left;
+   align-self: center;  
+   color: #FFD700;
+   font-size: 28px;
+   margin-left: 20px;
+   
+  
+  }
+
+  .logo-empresa{
+  grid-area: logo;
+  justify-self: center;
+  align-self: center;
+  }
+
+
+  .texto-conteudo-principal{
+grid-area:  texto;
+align-self: center;
+color: white;
+background-color: #002F52;
+padding: 10px;
+  }
+
+  .rodape{
+    width: 100%;
+    display: flex;
+    background-color: rgb(88, 79, 79);
+    padding: 20px;
+  }
+
+  .titulo-footer{
+    font-size: 20px;
+    margin: auto;
+
+
+  }
+
+  
