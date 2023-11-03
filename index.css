@@ -42,6 +42,7 @@ body{
 }
 
 .container-lista-menu{
+  position: absolute;
     display: flex;
     justify-content: center;
     width: 100%;
@@ -65,7 +66,7 @@ body{
     display: flex;
     margin-right: 20px;
     padding: 10px 0;
-    color: white;
+    color: #ffffff;
     font-size: 16px;
     font-weight: bold;
     width: 100%;
@@ -83,12 +84,12 @@ body{
     }
 
     .item-lista-menu:hover{
-    background: #002f52ab;
+    background: rgb(30, 38, 35)
     }
 
 
     .btn-serviço-ativo{
-      background-color: #001eff;
+      background-color: #000000;
     }
  
 
@@ -146,7 +147,6 @@ body{
     display: none;
     flex-direction: column;
     border-radius: 10px 10px 25% 25%;
-
     z-index: 10;
     
     
@@ -211,7 +211,7 @@ border-radius: 10px;
 
 
   .container-conteudo-principal{
-    background-image: url(fotos/vigilancia-patrimonial-ostensiva-como-recurso-para-sua-empresa-blog.png);
+    background-image: url(https://gestaodesegurancaprivada.com.br/wp-content/uploads/servico-seguranca-privada-23.jpg);
     font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
     font-weight: bold;
     background-position: left;
@@ -221,6 +221,7 @@ border-radius: 10px;
     box-sizing: border-box;
     padding: 10px;
     display: grid;
+    object-fit: contain;
     grid-template-columns: 1fr 1fr;
     grid-template-rows: 1fr 1fr;
     gap: 16px;
@@ -240,6 +241,7 @@ border-radius: 10px;
     display: flex;
     flex-direction: column;
     align-items: center;
+    
   }
 
   .titulo-conteudo-principal{
@@ -374,29 +376,6 @@ padding: 10px;
      .img-atendimento{
       width: 50px;
      }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
   }
 
   
