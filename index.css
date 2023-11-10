@@ -10,8 +10,7 @@ body{
 
 .cabeçalho{
     display: flex;
-    flex-direction: column;
-  
+    justify-content: space-between;
     width: 100%;
     background:  linear-gradient(97.54deg, #002F52 35.49%, #000000 165.37%);
     color: white;
@@ -19,6 +18,11 @@ body{
     box-sizing: border-box;
     box-shadow: 0 10px 100px rgb(0, 1, 90);
 }
+
+.logo-header{
+  margin-left: 5%;
+}
+
 .link-header{
   display: flex;
   flex-direction: column;
@@ -26,7 +30,7 @@ body{
 }
 .titulo-header{
     width: 150px;
-    font-size: 36px;
+    font-size: 26px;
     text-align: center;
    font-family: Verdana, Geneva, Tahoma, sans-serif;
    border-bottom: 1px solid black;
@@ -34,9 +38,10 @@ body{
   
 }
 .subtitulo-header{
+  font-size: 14px;
+  width: fit-content;
     margin-top: 5px;
     color:white;
-    margin-left: 10px;
     padding-bottom: 5px;
     letter-spacing: 6px;
 }
@@ -48,6 +53,7 @@ body{
     width: 100%;
     align-items: center;
     overflow: hidden;
+  
 }
 
 .botao-menu{
@@ -64,21 +70,17 @@ body{
 
 .lista-menu{
     display: flex;
-    margin-right: 20px;
-    padding: 10px 0;
     color: #ffffff;
     font-size: 16px;
-    font-weight: bold;
-    width: 100%;
-    justify-content: end;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
     }
 
     .item-lista-menu{
+      align-self: center;
         margin-right: 2rem;
-        padding: 5px;
-        letter-spacing: 1px;
-        border-right: 1px solid rgb(217, 255, 0);
-        border-bottom: 1px solid red;
+        padding: 5px  10px;
+        border-right: 1px solid white;
+        border-bottom: 1px solid white;
 
      
     }
@@ -102,16 +104,31 @@ body{
         width:55%;
         height: 500px;
         background-color: #002F52;
+        font-family: Verdana, Geneva, Tahoma, sans-serif;
+        text-transform: uppercase;
         color: white;
         margin-top: 124px;
         margin-left: -100%;
-        transition: 1s;
+        opacity: 20%;
+        transition: 1.5s;
         z-index: 10;
     }
 
     .menu-lateral-ativo{
         margin-left: 0;
         transition: 1.2s;
+        opacity: 100%;
+
+    }
+
+    .titulo-menu-lateral{
+      margin: 20px auto;
+      width: 150px;
+      font-size: 28px;
+      text-align: center;
+    
+     border-bottom: 1px solid black;
+     padding-bottom: 5px;
     }
 
   .lista-menu-lateral{
@@ -125,23 +142,25 @@ body{
   }
 
   .item-lista-menu-lateral{
-    margin: 25px 0;
-    padding: 10px 20px;
-    border-bottom: 1px solid white;
+    
+    padding: 25px 20px ;
+margin: 1px 0;
     width: 100%;
     box-sizing: border-box;
+    box-shadow: inset 1px 1px 50px rgb(0, 0, 0);
+    transition: 1s;
   }
 
   .item-lista-menu-lateral:hover{
  background: #ffd90048;
- transition: .5s;
+ transition: 1ss;
   }
   
   .container-serviços{
     position: absolute;
-    background-color: #002F52;
+    background:  linear-gradient(97.54deg, #002F52 35.49%, #000000 165.37%);
     width: 40%;
-    margin-top: 126px;
+    margin: 70px 11% ;
     align-self: flex-end
     ;
     display: none;
@@ -153,7 +172,7 @@ body{
   }
   .container-serviços-ativo{
        display: flex;
-        transition: 1s;
+        transition: 2s;
        
   }
  
@@ -161,7 +180,7 @@ body{
   .lista-serviços{
     margin: 10px;
     position: relative;
-    background-color: #ff0000;
+    background-color: rgb(255, 255, 255);
 display: grid;
 grid-template-columns: 1fr 1fr 1fr;
 grid-template-rows: 1fr 1fr  ;
@@ -177,7 +196,7 @@ grid-template-rows: 1fr 1fr;
 
 border-radius: 10px;
     text-align: center;
-    background-color: aliceblue;
+    background-color: rgba(0, 0, 0, 0.224);
     box-sizing: border-box;
     padding: 10px;
 
@@ -360,10 +379,14 @@ padding: 10px;
 
   
   @media screen and ( max-width:900px){
+.logo-header{
+  margin: auto;
+}
+
     .lista-menu{
       display: none;
     }
-
+ 
     .botao-menu{
       display: block;
     }
