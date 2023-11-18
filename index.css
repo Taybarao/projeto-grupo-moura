@@ -6,9 +6,15 @@
 body{
     display: flex;
     flex-direction: column;
+    background: #cccccc;
+   
+    
+
 }
 
 .cabeçalho{
+  position: fixed;
+  z-index: 10;
     display: flex;
     justify-content: space-between;
     width: 100%;
@@ -16,11 +22,20 @@ body{
     color: white;
     padding: 5px;
     box-sizing: border-box;
-    box-shadow: 0 10px 100px rgb(0, 1, 90);
+
+ 
+  
 }
 
+.cabeçalho-ativo{
+  box-shadow:  100px 0 300px rgb(0, 0, 0);
+  border-bottom: 1px solid white;
+}
+
+
+
 .logo-header{
-  margin-left: 5%;
+  margin-left: 10%;
 }
 
 .link-header{
@@ -47,24 +62,25 @@ body{
 }
 
 .container-lista-menu{
-  position: absolute;
     display: flex;
     justify-content: center;
     width: 100%;
     align-items: center;
-    overflow: hidden;
+   
   
 }
 
 .botao-menu{
     display: none;
-    background-image: url(fotos/Menu.svg);
+    background-image: url(fotos/Menu\ Aberto.svg);
     background-repeat: no-repeat;
     background-position: center;
     width: 25px;
-    height: 25px;
-    padding: 10px; 
-    margin: 10px ;
+    height: 25px; 
+    margin: 10px 30px ;
+    
+  
+
     
 }
 
@@ -85,13 +101,15 @@ body{
      
     }
 
-    .item-lista-menu:hover{
-    background: rgb(30, 38, 35)
-    }
+  
+    
+     
 
 
     .btn-serviço-ativo{
-      background-color: #000000;
+      background-color: yellow;
+      color: #002F52;
+     
     }
  
 
@@ -136,6 +154,7 @@ body{
     flex-direction: column;
     align-items: flex-start;
     width: 100%;
+    font-size: 12px;
     margin-top: 50px;
   
     
@@ -143,24 +162,25 @@ body{
 
   .item-lista-menu-lateral{
     
-    padding: 25px 20px ;
-margin: 1px 0;
+    padding: 25px 10px ;
+    margin: 1px 0;
     width: 100%;
     box-sizing: border-box;
-    box-shadow: inset 1px 1px 50px rgb(0, 0, 0);
+    border-bottom: 1px solid white;
     transition: 1s;
   }
 
   .item-lista-menu-lateral:hover{
  background: #ffd90048;
- transition: 1ss;
+ transition: 1s;
   }
   
   .container-serviços{
     position: absolute;
     background:  linear-gradient(97.54deg, #002F52 35.49%, #000000 165.37%);
     width: 40%;
-    margin: 70px 11% ;
+    margin: 70px 7% ;
+    border: 5px double white;
     align-self: flex-end
     ;
     display: none;
@@ -172,7 +192,8 @@ margin: 1px 0;
   }
   .container-serviços-ativo{
        display: flex;
-        transition: 2s;
+    
+      
        
   }
  
@@ -220,59 +241,99 @@ border-radius: 10px;
     border-radius: 5px;
   }
 
-
-
-    
-
-
-
-
-
-
-  .container-conteudo-principal{
-    background-image: url(https://gestaodesegurancaprivada.com.br/wp-content/uploads/servico-seguranca-privada-23.jpg);
-    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
-    font-weight: bold;
-    background-position: left;
-    background-size: cover;
-    width: 100%;
-    height: 600px;
-    box-sizing: border-box;
-    padding: 10px;
-    display: grid;
-    object-fit: contain;
-    grid-template-columns: 1fr 1fr;
-    grid-template-rows: 1fr 1fr;
-    gap: 16px;
-    grid-template-areas: 
-    " titulo titulo"
-    " logo texto"
-    ;
-  }
-
   .desfoque-pagina{
-    opacity: 50%;
-    transition: .5s;
+    opacity: 50%;    
+    transition: .7s;
+  
+ 
+
    
   }
 
+
+
+
+
+
+
+
+#slider {
+  width: 100%;
+  height: 80vh;
+  position: relative;
+  background-color: aliceblue;
+}
+
+#slider img{
+  position: absolute;
+  opacity: 0;
+  width: 100%;
+  height: 100%;
+  transition: opacity 3s;
+  object-fit: cover;
+
+
+}
+
+#slider img.selected{
+
+  opacity: 1;
+}
+
+  .container-informaçoes{
+    width: 50%;
+    height: 100px;
+    color: #ffffff;
+    position: absolute;
+    margin-top: 30px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin-left: 25px;
+  }
+
+
+  .apresentaçao{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    background-color: #000000;
+
+  }
+
+  .titulo-apresentaçao{
+    background-color: #002f5291;
+    border-radius: 5px;
+    font-size: 38px;
+    margin-top: 20px;
+    padding: 15px;
+  }
+  .texto-apresentaçao{
+     background-color: #002f5264;
+    border-radius: 5px;
+    margin-top: 20px;
+   font-size: 28px;
+   padding: 15px;
+
+
+  }
+
+
+
+
   .conteudo-pagina{
+    
     display: flex;
     flex-direction: column;
     align-items: center;
+    width: 90%;
+    margin: 100px auto;
+    box-sizing: border-box;
+    
+    position: relative;
+    
     
   }
 
-  .titulo-conteudo-principal{
-   grid-area: titulo; 
-   justify-self: left;
-   align-self: center;  
-   color: #FFD700;
-   font-size: 28px;
-   margin-left: 20px;
-   
-  
-  }
+
 
   .logo-empresa{
   grid-area: logo;
@@ -295,6 +356,7 @@ padding: 10px;
     flex-direction: column;
     background-color: rgb(88, 79, 79);
     padding: 20px;
+    
   }
 
   .titulo-footer{
@@ -315,6 +377,7 @@ padding: 10px;
     width: 100%;
      margin: 50px 0 0;
    text-align: center;
+    background-color: rgba(0, 4, 255, 0.655)
       }
 
   .lista-atendimento{
@@ -323,8 +386,8 @@ padding: 10px;
     justify-content: center;
     justify-content: space-evenly;
     align-items: center;
-    background-color: #002F52;
-    
+
+
     width: 90%;
     height: 100px;
     font-size: 22px;
@@ -399,6 +462,13 @@ padding: 10px;
 
      .img-atendimento{
       width: 50px;
+     }
+     .conteudo-pagina{
+      width: 100%;
+     }
+
+     .container-informaçoes{
+      width: 90%;
      }
   }
 
