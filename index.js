@@ -12,12 +12,11 @@ let time = 5000,
        imagens[imagemVista].classList.add("selected")
 }
  function start(){
-  setInterval(() => {
-   nextImage();
-    }, time)
+           setInterval(() => {
+            nextImage();
+             }, time)
 }
 window.addEventListener("load",start)
-
 
 //efeito fade ao rolar tela
  window.sr = ScrollReveal({reset: true });

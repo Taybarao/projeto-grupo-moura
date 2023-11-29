@@ -3,11 +3,18 @@
     src: url(../font/icones.ttf);
 }
 
+
+.desfoque-pagina{
+  opacity: 50%;    
+  transition: .7s;  
+}
+
+
 body{
     display: flex;
     flex-direction: column;
     background: #cccccc;
-   
+   font-family: Verdana, Geneva, Tahoma, sans-serif;
     
 
 }
@@ -47,7 +54,7 @@ body{
     width: 150px;
     font-size: 26px;
     text-align: center;
-   font-family: Verdana, Geneva, Tahoma, sans-serif;
+  
    border-bottom: 1px solid black;
    padding-bottom: 5px;
   
@@ -192,6 +199,7 @@ body{
   }
   .container-serviços-ativo{
        display: flex;
+       position: fixed;
     
       
        
@@ -212,24 +220,32 @@ padding: 5px ;
 
   .item-lista-serviços{
     
-display: grid;
-grid-template-rows: 1fr 1fr;
-
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 10px 0;
 border-radius: 10px;
     text-align: center;
     background-color: rgba(0, 0, 0, 0.224);
     box-sizing: border-box;
-    padding: 10px;
+    border: 1px solid rgba(0, 0, 0, 0.083);
+
 
   }
 
   .logo-item-serviços{
     margin: auto;
-    width: 50px;
+    padding: 5px;
+    width: 45px;
   }
 
   .titulo-item-serviços{
-    margin: auto;
+    
+ 
+    background: white;
+    font-size: 12px;
+    width: 100%;
+    padding: 10px;
   }
 
   .botao-saibaMais-serviços{
@@ -241,14 +257,7 @@ border-radius: 10px;
     border-radius: 5px;
   }
 
-  .desfoque-pagina{
-    opacity: 50%;    
-    transition: .7s;
-  
- 
 
-   
-  }
 
 
 
@@ -333,49 +342,74 @@ border-radius: 10px;
     
   }
 
-
-
-  .logo-empresa{
-  grid-area: logo;
-  justify-self: center;
-  align-self: center;
+  .apresentaçao, .sobre-index, .atendimento{
+    margin: 50px 0;
   }
 
 
-  .texto-conteudo-principal{
-grid-area:  texto;
-align-self: center;
-color: white;
-background-color: #002F52;
-padding: 10px;
+
+
+
+
+  .sobre-index{
+      width: 100%;
+      height: 400px ;
+    background-image: linear-gradient(rgba(255, 255, 255, 0), rgba(109, 130, 213, 0.234));
+box-shadow: 7px 6px 18px rgba(0, 0, 0, 0.229);
+display: grid;
+grid-template-areas: 
+  " foto titulo "
+   " foto  texto "
+   "foto brazao";
+   column-gap: 2rem;
   }
 
-  .rodape{
-    width: 100%;
-    display: flex;
-    flex-direction: column;
-    background-color: rgb(88, 79, 79);
-    padding: 20px;
+
+  .titulo-sobre{
+    grid-area: titulo;
+    align-self: flex-end;
+    font-size: 24px;
+font-weight: bold;
+border-left: 1px solid rgba(0, 0, 0, 0.4);
+padding: 0 20px;
+
+  }
+
+  .texto-sobre{
+    grid-area:  texto;
+    align-self: center;
+    border-left: 1px solid rgba(0, 0, 0, 0.4);
+    
+padding: 0 20px;
     
   }
 
-  .titulo-footer{
-    font-size: 20px;
+  .imagem-equipe{
     margin: auto;
-    text-transform: uppercase;
-    letter-spacing: 5px;
-    text-align: center;
-
-
+    grid-area: foto;
+    max-width: 400px;
 
   }
+
+  .brazao-sobre{
+    grid-area: brazao;
+    justify-self: center;
+  }
+
+
+
+
+
+
+
+
+
 
 
 
   .atendimento{
     display: flex;
     width: 100%;
-     margin: 50px 0 0;
    text-align: center;
     background-color: rgba(0, 4, 255, 0.655)
       }
@@ -436,7 +470,25 @@ padding: 10px;
 
 
 
+.rodape{
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  background-color: rgb(88, 79, 79);
+  padding: 20px;
+  
+}
 
+.titulo-footer{
+  font-size: 20px;
+  margin: auto;
+  text-transform: uppercase;
+  letter-spacing: 5px;
+  text-align: center;
+
+
+
+}
 
 
 
