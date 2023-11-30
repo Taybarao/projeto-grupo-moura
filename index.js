@@ -35,7 +35,7 @@ const botaoMenu = document.querySelector('.botao-menu')
 
 //botao da janela de soluçoes + efeito desfoque restante tela
 const botaoServiço = document.querySelector('.botao-serviços')
- const listaServiços = document.querySelector('.container-serviços')
+ const listaServiços = document.querySelector('.container-serviços') 
   const btServiço = document.querySelector('.btn-serviço')
    const margemCabeçalho = document.querySelector('.cabeçalho')
 botaoServiço.addEventListener('click', () => {
@@ -46,5 +46,16 @@ botaoServiço.addEventListener('click', () => {
 })
 
 
+const sliderPrincipal = document.querySelector('.s1');
+const btSlideEsquerdo = document.querySelector('.bt-esquerdo');
+const btSlideDireito = document.querySelector('.bt-direito');
 
+btSlideDireito.addEventListener('click', () => {
+  sliderPrincipal.classList.remove('s1-desativado');
+  sliderPrincipal.classList.add('s1-ativo');
+});
 
+btSlideEsquerdo.addEventListener('click', () => {
+  sliderPrincipal.classList.remove('s1-ativo');
+  sliderPrincipal.classList.add('s1-desativado');
+});
